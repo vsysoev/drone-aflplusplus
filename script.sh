@@ -1,0 +1,3 @@
+#!/bin/sh
+
+afl-fuzz -i $PLUGIN_INPUT -o $PLUGIN_OUTPUT -- $PLUGIN_EXEC $PLUGIN_PARAMS
