@@ -1,12 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
 export AFL_EXIT_WHEN_DONE=1
 export AFL_NO_UI=1
-if [ "$PLUGIN_EXEC_TIME"!="" ]; then
+if [ -z ${PLUGINE_EXEC_TIME+x} ]; then
     PLUGIN_EXEC_TIME="-V $PLUGIN_EXEC_TIME"
 fi
 
-if [ "$PLUGIN_NAME"!=""]; then
+if [ -z ${PLUGIN_NAME+x} ]; then
     PLUGIN_NAME="-M $PLUGIN_NAME"
 fi
 $PLUGIN_AFL_ENV afl-fuzz -i $PLUGIN_INPUT -o $PLUGIN_OUTPUT $PLUGIN_EXEC_TIME $PLUGIN_NAME -- $PLUGIN_EXEC $PLUGIN_PARAMS
