@@ -2,7 +2,7 @@
 
 export AFL_EXIT_WHEN_DONE=1
 export AFL_NO_UI=1
-if [ -z ${PLUGINE_EXEC_TIME+x} ]; then
+if [ -z ${PLUGIN_EXEC_TIME+x} ]; then
     PLUGIN_EXEC_TIME="-V $PLUGIN_EXEC_TIME"
 fi
 
