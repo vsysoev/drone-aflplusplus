@@ -13,8 +13,6 @@ OUT_MIN_DIR="$PLUGIN_OUTPUT/$PLUGIN_NAME/queue.min"
 
 afl-cmin -i $IN_MIN_DIR -o $OUT_MIN_DIR -- $PLUGIN_EXEC $PLUGIN_PARAMS
 
-ls -la $IN_MIN_DIR
-ls -la $OUT_MIN_DIR
 rm -rf $IN_MIN_DIR
 mv $OUT_MIN_DIR $IN_MIN_DIR
 
